@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css';
 
 
-const InputFeild = () => {
+const InputFeild = ({todo, settodo}) => {
   return ( 
   <form className ='input'>
     <input type='input' placeholder='Enter a task' className='input_box'/> 
