@@ -1,10 +1,10 @@
 // import { type } from '@testing-library/user-event/dist/type';
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import InputFeild from './components/InputFeild'; 
 
 const App: React.FC = () => {
- const [todo, setTodo] = useState<string> ("")
+ const [todo, setTodo] = useState<string>()
  
  
    return ( 
