@@ -10,7 +10,7 @@ const App: React.FC = () => {
    return ( 
     <div className="App">
       <span className="heading">Taskify</span>
-    <InputFeild todo ={todo} setTo />
+    <InputFeild todo={todo} setTodo={setTodo} />
     
     </div>
   );
