@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useRef } from 'react'
 import './styles.css';
 
 interface Props{
@@ -9,15 +9,22 @@ handleAdd: (e:FormEvent<HTMLFormElement>) => void;
 }
 
 const InputFeild: React.FC<Props> = ({todo, setTodo, handleAdd}:Props) => {
+  const inputRef = useRef<HTMLInputElement >(null);
+
+  
   return ( 
-  <form className ="input" onSubmit={handleAdd}>
+  <form className ="input" onSubmit={(e) =>{
+    handleAdd (e)
+  inputRef.current?.blur()
+  }}>
     
     <input 
+    ref={inputRef}
     type='input'
     value={todo}
     onChange={(e) => setTodo(e.target.value)} 
     placeholder='Enter a task'
-     className='input__box'
+    className='input_box'
     /> 
     
     <button className='input_submit' type='submit'> Go </button>
