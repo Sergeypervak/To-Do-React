@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
    if (todo) {
      
-    setTodos([...todos, { id: Date.now(), todo, isDone: false }])
+    setTodos([...todos, { id: Date.now(),todo, isDone: false }])
     setTodo("");
     }
  
@@ -29,9 +29,9 @@ const App: React.FC = () => {
       <span className="heading">Taskify</span>
     <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
     <TodoList todos={todos} setTodos={setTodos}/>
-    {todos.map((t) => (
-      <li>{t.todo}</li>
-    ))}
+    {/* {todos.map((t) => (
+       <li>{t.todo}</li>
+    ))} */}
     </div>
   );
 };
